@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: linear-gradient(135deg, #83a8df, #c3cfe2);
+}
+.container{
+    width: 100%;
+    max-width: 700px;
+    border-radius: 1rem;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    padding:2rem ;
+}
+h1{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;position: relative;
+    font-size: 2rem;
+    font-weight: 800;
+}
+h1::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    background-color: #667eea;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+}
+button{
+    background: linear-gradient(45deg ,#667eea , #764ba2  );
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(102, 126,234,0.3);
+}
+button:active{
+    transform: translateY(0);
+}
+.palette-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+}
+.color-box{
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    overflow: hidden;
+   
+}
+.color-box:hover{
+    transform: translateY(-5px);
+}
+.color{
+    height: 120px;
+    cursor: pointer;
+}
+.color-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.9rem;
+    padding: 0.7rem;
+    background-color: #fff;
+}
+.hex-value{
+    letter-spacing:0.5px;
+    font-weight:500 ;
+}
+.copy-btn{
+    color: #64748b;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.copy-btn:hover{
+    color: #667eea;
+}
+@media (max-width:850px){
+    .palette-container{
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    }
+    .container{
+        max-width: 700px;
+    }
+}
+@media (max-width:700px){
+    .palette-container{
+        grid-template-columns: repeat(auto-fit,minmax(90px,1fr));
+    }
+    .container{
+        max-width: 600px;
+    }
+}
+@media (max-width:550px){
+    .palette-container{
+        grid-template-columns: repeat(auto-fit,minmax(80px,1fr));
+    }
+    .container{
+        max-width: 500px;
+    }
+}
+
+
